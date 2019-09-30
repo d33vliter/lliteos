@@ -55,7 +55,7 @@ sudo cp pkg/slim.conf /etc/slim.conf
 
 #PLYMOUTH
 sudo apt purge wicd*
-sudo apt p
+sudo apt autoremove
 sudo cp pkg/interfaces /etc/network/interfaces
 sudo apt install  network-manager-gnome
 wget http://ftp.us.debian.org/debian/pool/main/libp/libpng/libpng12-0_1.2.50-2+deb8u3_amd64.deb
