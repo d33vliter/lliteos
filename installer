@@ -7,69 +7,70 @@ clear
 
 
 #REPOSITORIOS
-cp pkg/sources.list /etc/apt/sources.list
-apt update
+sudo cp pkg/sources.list /etc/apt/sources.list
+sudo apt update
 
 
 #SET NECESARIO PARA COMPILAR PAQUETES SHAVAL
-apt install  linux-headers-$(uname -r) build-essential checkinstall make automake cmake autoconf git git-core
+sudo apt install  linux-headers-$(uname -r) build-essential checkinstall make automake cmake autoconf git git-core
 
 
 #PAQUETES
-apt install xfce4-goodies plank neofetch compton wget mpv
+sudo apt install xfce4-goodies plank neofetch compton wget mpv pavucontrol
 
 ##temas/iconos
-apt -t ascii-backports install adapta-gtk-theme papirus-icon-theme
+sudo apt -t ascii-backports install adapta-gtk-theme papirus-icon-theme
 
 ##libreoffice-suite
-apt install libreoffice libreoffice-gtk2 
+sudo apt install libreoffice libreoffice-gtk2 
 
 ##tipografia-winbugs
-apt install ttf-mscorefonts-installer
+sudo apt install ttf-mscorefonts-installer
 
 ##vscode
 wget https://az764295.vo.msecnd.net/stable/b37e54c98e1a74ba89e03073e5a3761284e3ffb0/code_1.38.1-1568209190_amd64.deb
-apt install ./code_1.38.1-1568209190_amd64.deb
+sudo apt install ./code_1.38.1-1568209190_amd64.deb
 
 
 #ENTORNO
 ##inicio
 tar -zxvf pkg/autostart.tar.gz -C pkg
+mkdir /$HOME/.config
 cp -r pkg/autostart /$HOME/.config/
 
 ##paneles-temas-sesion
 tar -zxvf pkg/desktopconfig.tar.gz -C pkg
-mkdir /$HOME/.config
 cp -r pkg/xfce4 /$HOME/.config/
 
 ##wallpaper
-cp -r pkg/wallpapers /usr/share/images/desktop-base
+sudo cp -r pkg/wallpapers /usr/share/images/desktop-base
 
 #SLIM
-apt install slim
+sudo apt install slim
 tar -zxvf pkg/liteslimtheme.tar.gz -C pkg
-cp -r pkg/liteslim /usr/share/slim/themes
-cp pkg/slim.conf /etc/slim.conf
+sudo cp -r pkg/liteslim /usr/share/slim/themes
+sudo cp pkg/slim.conf /etc/slim.conf
 
 
 #PLYMOUTH
-apt purge wicd
-cp pkg/interfaces /etc/network/interfaces
-apt install  network-manager-gnome
+sudo apt purge wicd
+sudo cp pkg/interfaces /etc/network/interfaces
+sudo apt install  network-manager-gnome
 wget http://ftp.us.debian.org/debian/pool/main/libp/libpng/libpng12-0_1.2.50-2+deb8u3_amd64.deb
 wget http://ftp.us.debian.org/debian/pool/main/p/plymouth/plymouth_0.9.0-9_amd64.deb
-apt install ./libpng12-0_1.2.50-2+deb8u3_amd64.deb
-apt install ./plymouth_0.9.0-9_amd64.deb
+sudo apt install ./libpng12-0_1.2.50-2+deb8u3_amd64.deb
+sudo apt install ./plymouth_0.9.0-9_amd64.deb
 tar -zxvf pkg/liteplymouth.tar.gz -C pkg
-cp -r pkg/futureprototype /usr/share/plymouth/themes/
-plymouth-set-default-theme -R futureprototype
-cp pkg/grub /etc/default/grub
-update-grub
-update-grub2
+sudo cp -r pkg/futureprototype /usr/share/plymouth/themes/
+sudoplymouth-set-default-theme -R futureprototype
+sudo cp pkg/grub /etc/default/grub
+sudo update-grub
+sudo update-grub2
 
 ###FINALIZAR###
 echo "El sistema se reiniara para concretar la instalacion...."
 sleep 3s 
+clear
 echo "Gracias por instalar L-LITEOS"
 sleep 1s
-reboot
+sudo reboot
