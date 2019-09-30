@@ -37,14 +37,12 @@ apt install ./code_1.38.1-1568209190_amd64.deb
 tar -zxvf pkg/autostart.tar.gz -C pkg
 cp -r pkg/autostart /$HOME/.config/
 
-##paneles-temas
-tar -zxvf pkg/xfceconfig.tar.gz -C pkg
-cp pkg/xfceconfig/xfce4-panel.xml /$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
-cp pkg/xfceconfig/xsettings.xml /$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
+##paneles-temas-sesion
+tar -zxvf pkg/xfceperchannel.tar.gz -C pkg
+cp -r pkg/xfce-perchannel-xml /$HOME/.config/xfce4/xfconf/xfce-perchannel-xml
 
 ##wallpaper
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image -s "pkg/wallpapers/default.jpg"
-
+cp -r pkg/wallpapers /usr/share/images/desktop-base
 
 #SLIM
 apt install slim
