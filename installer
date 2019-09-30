@@ -39,8 +39,8 @@ cp -r pkg/autostart /$HOME/.config/
 
 ##paneles-temas
 tar -zxvf pkg/xfceconfig.tar.gz -C pkg
-cp pkg/xfceconfig/xfce-panel.xml /$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce-panel.xml
-cp pkg/xfceconfig/xsettings.xml /$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
+cp pkg/xfceconfig/xfce4-panel.xml /$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
+cp pkg/xfceconfig/xsettings.xml /$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 ##wallpaper
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image -s "pkg/wallpapers/default.jpg"
@@ -61,7 +61,7 @@ wget http://ftp.us.debian.org/debian/pool/main/libp/libpng/libpng12-0_1.2.50-2+d
 wget http://ftp.us.debian.org/debian/pool/main/p/plymouth/plymouth_0.9.0-9_amd64.deb
 apt install ./libpng12-0_1.2.50-2+deb8u3_amd64.deb
 apt install ./plymouth_0.9.0-9_amd64.deb
-tar -zxvf liteplymouth.tar.gz -C pkg
+tar -zxvf pkg/liteplymouth.tar.gz -C pkg
 cp -r pkg/futureprototype /usr/share/plymouth/themes/
 plymouth-set-default-theme -R futureprototype
 cp pkg/grub /etc/default/grub
