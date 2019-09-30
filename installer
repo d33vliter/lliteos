@@ -2,7 +2,6 @@
 
 echo "L-LITE OS installer"
 sleep 2s
-sudo su
 clear
 #########################
 
@@ -58,9 +57,11 @@ cp pkg/slim.conf /etc/slim.conf
 apt purge wicd
 cp pkg/interfaces /etc/network/interfaces
 apt install  network-manager-gnome
+wget http://ftp.us.debian.org/debian/pool/main/libp/libpng/libpng12-0_1.2.50-2+deb8u3_amd64.deb
 wget http://ftp.us.debian.org/debian/pool/main/p/plymouth/plymouth_0.9.0-9_amd64.deb
+apt install ./libpng12-0_1.2.50-2+deb8u3_amd64.deb
 apt install ./plymouth_0.9.0-9_amd64.deb
-tar -zxvf plymouthllite.tar.gz -C pkg
+tar -zxvf liteplymouth.tar.gz -C pkg
 cp -r pkg/futureprototype /usr/share/plymouth/themes/
 plymouth-set-default-theme -R futureprototype
 cp pkg/grub /etc/default/grub
