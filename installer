@@ -59,8 +59,10 @@ sudo apt autoremove
 sudo cp pkg/interfaces /etc/network/interfaces
 sudo apt install  network-manager-gnome
 wget http://ftp.us.debian.org/debian/pool/main/libp/libpng/libpng12-0_1.2.50-2+deb8u3_amd64.deb
+wget http://ftp.us.debian.org/debian/pool/main/p/plymouth/plymouth-themes_0.9.0-9_amd64.deb
 wget http://ftp.us.debian.org/debian/pool/main/p/plymouth/plymouth_0.9.0-9_amd64.deb
 sudo apt install ./libpng12-0_1.2.50-2+deb8u3_amd64.deb
+sudo apt install ./plymouth-themes_0.9.0-9_amd64.deb
 sudo apt install ./plymouth_0.9.0-9_amd64.deb
 tar -zxvf pkg/liteplymouth.tar.gz -C pkg
 sudo cp -r pkg/futureprototype /usr/share/plymouth/themes/
