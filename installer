@@ -35,6 +35,7 @@ sudo apt install ./code_1.38.1-1568209190_amd64.deb
 #ENTORNO
 ##inicio
 tar -zxvf pkg/autostart.tar.gz -C pkg
+sudo rm -r -f /$HOME/.config
 mkdir /$HOME/.config
 cp -r pkg/autostart /$HOME/.config/
 
