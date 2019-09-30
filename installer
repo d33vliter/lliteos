@@ -38,8 +38,9 @@ tar -zxvf pkg/autostart.tar.gz -C pkg
 cp -r pkg/autostart /$HOME/.config/
 
 ##paneles-temas-sesion
-tar -zxvf pkg/xfceperchannel.tar.gz -C pkg
-cp -r pkg/xfce-perchannel-xml /$HOME/.config/xfce4/xfconf/xfce-perchannel-xml
+tar -zxvf pkg/desktopconfig.tar.gz -C pkg
+mkdir /$HOME/.config
+cp -r pkg/xfce4 /$HOME/.config/
 
 ##wallpaper
 cp -r pkg/wallpapers /usr/share/images/desktop-base
