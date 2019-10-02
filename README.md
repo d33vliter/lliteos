@@ -2,7 +2,7 @@
 ![](/pkg/logo/L-LITEOS.png)
 ---
 
-L-LITE OS Installer es un scripts escrito en Bash que ayudara a la instalacion de L-LITE OS. 
+L-LITE OS Installer es un script escrito en Bash que ayudara a la instalacion de L-LITE OS. 
 Es provisional mientras se crea la iso.
 
 **Pasos**:
