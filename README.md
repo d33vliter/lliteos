@@ -5,6 +5,9 @@
 L-LITE OS Installer es un script escrito en Bash que ayudara a la instalacion de L-LITE OS. 
 Es provisional mientras se crea la iso.
 
+L-LITE OS es una Distribución GNU/Linux basada en Devuan, orientada a computadoras de escritorio lentas,
+Extendiendo su utilidad y dándole un surtido de aplicaciones necesarias para el uso diario y educativo.
+
 **Pasos**:
 * Descarga la ISO de instalador por red de Devuan:https://devuan.org/get-devuan
 * Instala devuan base(tty).
